@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularGameControl';
+  evenNumbers: number[] = [];
+  oddNumbers: number[] = [];
+
+  onGameStarted(count: number) {
+    if (count % 2 === 0) {
+      this.evenNumbers.push(count);
+    } else {
+      this.oddNumbers.push(count);
+    }
+  }
+
 }
